@@ -93,6 +93,12 @@ public class Employee
         return currency;
     }
     
-    
+    public float getSalary(){
+        return salary;
+    }
+
+    public float getBonusPercentage() {
+        return bonusPercentage;
+    }
     
 }
