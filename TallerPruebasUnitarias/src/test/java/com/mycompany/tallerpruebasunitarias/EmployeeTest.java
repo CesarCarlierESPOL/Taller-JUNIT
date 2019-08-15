@@ -96,7 +96,19 @@ public class EmployeeTest {
         }
         float result = instance.cs();
         assertEquals(expResult, result, 0.0);
+    }
+    
+    @Test
+    public void pruebaSalarioManager(){
+        Employee instance = new Employee(125,"USD",30,Manager);
+        float salarioMana = instance.getSalary();
+        Date date = new Date();
+        LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        int month = localDate.getMonthValue();
+        float valueM = salarioMana + (instance.getBonusPercentage()* 0.7F);
+        float expected = month%2==0?valueM:valueM + 386/12*2;
+        assertEquals(expected,instance.cs());
         
-        //fail("Fallo en la prueba worker.");
+        
     }
 }
