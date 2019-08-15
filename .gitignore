@@ -108,3 +108,5 @@ nbdist/
 
 # End of https://www.gitignore.io/api/java,eclipse,netbeans
 
+/TallerPruebasUnitarias/nbproject/
+/TallerPruebasUnitarias/target/

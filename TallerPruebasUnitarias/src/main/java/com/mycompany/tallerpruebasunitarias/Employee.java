@@ -32,6 +32,9 @@ public class Employee
         this.bonusPercentage = bonusPercentage;
         this.employeeType = employeeType;
     }
+    
+    
+    
     //calcula el salario dependiendo del tipo de trabajador 
     //y entrega el décimo correspondiente cada 2 meses
     public float cs() {
@@ -81,4 +84,15 @@ public class Employee
         }
         return 0.0F;
     }
+
+    public float getRmu() {
+        return rmu;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+    
+    
+    
 }
