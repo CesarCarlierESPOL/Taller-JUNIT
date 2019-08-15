@@ -43,7 +43,7 @@ public class EmployeeTest {
     public void testCalculateYearBonusSupervisor() {
         
         System.out.println("METODO CalculateYearBonus");
-        Employee instance = new Employee(800, "USD", 15, Worker);
+        Employee instance = new Employee(800, "USD", 15, Supervisor);
         float expResult = (float) (800 +386*0.5);
         float result = instance.CalculateYearBonus();
         assertEquals(expResult, result, 993.0);
@@ -54,10 +54,11 @@ public class EmployeeTest {
     public void testCalculateYearBonusManager() {
         
         System.out.println("METODO CalculateYearBonus");
-        Employee instance = new Employee(1000, "USD", 20, Worker);
+        Employee instance = new Employee(1000, "USD", 20, Manager);
         float expResult = (float) (1000 + 386*1);
         float result = instance.CalculateYearBonus();
-        assertEquals(expResult, result, 1386.0);
+        System.out.println(result);
+        assertEquals(expResult, result, 0.1);
         
         //fail("Fallo en la prueba Manager.");
     }
